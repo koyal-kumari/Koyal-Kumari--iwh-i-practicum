@@ -1,0 +1,28 @@
+// updates.pug
+doctype html
+html
+    head
+        title= title
+    body
+        h1= title
+        p Fill in the form below to create a new custom object record.
+
+        //- Form to create a custom object
+        form(action='/update-cobj' method='POST')
+            div
+                label(for='name') Name:
+                input(type='text' id='name' name='name' required)
+            div
+                label(for='bio') Bio:
+                input(type='text' id='bio' name='bio' required)
+            div
+               label(for="weapon") Weapon:
+               select(name="weapon")
+                    option(value="Super Mushroom") Super Mushroom
+                    option(value="Arm Cannon") Arm Cannon
+                    option(value="Master Sword") Master Sword
+            div
+                button(type='submit') Submit
+
+        //- Link back to homepage
+        a(href='/') Return to the homepage
